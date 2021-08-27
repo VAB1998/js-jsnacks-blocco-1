@@ -7,6 +7,7 @@
  */
 
 // Con ciclo for
+/*
  let somma = 0; 
 
  for(let i = 0; i < 5; i++){
@@ -27,7 +28,7 @@
     j++;
  }
  console.log("Somma con ciclo while: " + somma);
-
+*/
 
  //Snack 2
 /**
@@ -48,3 +49,28 @@ for(let i = 0; i < 8; i++){
     
     document.getElementById("falsa_lista").innerHTML += "<li>" + listaNomi[n] + " " + listaCognomi[c] + "</li>";
 }
+
+
+//Snack 3
+/**
+ *  A)
+ *   Crea due array che hanno un numero di elementi diversi (di almeno 6 elementi).
+ *   Aggiungi elementi casuali all'array che ha meno elementi, fino a quando ne avrà 
+ *   tanti quanti l'altro.
+ * 
+ *  B)
+ *  Mostriamo in HTML le due liste in parallelo
+ */
+
+ const arrayUno = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan"];
+ const arrayDue = ["Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz"];
+ 
+ 
+ while(arrayUno.length != arrayDue.length){
+     arrayUno.push((Math.floor(Math.random() * 1000)));
+ }
+ 
+ for(let i = 0; i<arrayUno.length; i++){
+     document.getElementById("prima_lista").innerHTML += "<li>" + arrayUno[i] + "</li>";
+     document.getElementById("seconda_lista").innerHTML += "<li>" + arrayDue[i] + "</li>";
+ }
