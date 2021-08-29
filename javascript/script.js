@@ -62,12 +62,16 @@ for(let i = 0; i < 8; i++){
  *  Mostriamo in HTML le due liste in parallelo
  */
 
- const arrayUno = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan"];
- const arrayDue = ["Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz"];
+ const arrayDue = ["Adam", "Alex", "Aaron", "Ben", "Carl", "Dan"];
+ const arrayUno = ["Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz"];
  
  
  while(arrayUno.length != arrayDue.length){
-     arrayUno.push((Math.floor(Math.random() * 1000)));
+     if ( arrayUno.length < arrayDue.length){
+        arrayUno.push((Math.floor(Math.random() * 1000)));
+     } else if( arrayUno.length > arrayDue.length){
+        arrayDue.push((Math.floor(Math.random() * 1000)));
+     }
  }
  
  for(let i = 0; i<arrayUno.length; i++){
